@@ -41,7 +41,8 @@ This is a realtime chat application demonstrating communication using WebSockets
 
 ## Use Case
 
-- Chat Client: Fake incoming messages + reply messages + mocked authentication
+- Chat Client: 
+After connecting to the server: the incoming fake messages, new users joining and users leaving the chat - events that are coming in every 4 seconds. In reply field theres an option to write a message and send it to the chat.
 
 
 
@@ -66,5 +67,6 @@ Mandatory Stack
 * Socket.IO Client
 
 ## (Optional) Screenshots / GIFs
+<img width="1196" alt="Screenshot 2025-06-03 at 15 13 52" src="https://github.com/user-attachments/assets/f5d916ae-f816-4203-bada-99cdcc7afc29" />
 
 

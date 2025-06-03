@@ -6,7 +6,7 @@ This is a realtime chat application demonstrating communication using WebSockets
 ## Instructions to Run
 1.  **Copy this directory** to your local machine.
     ```bash
-    https://github.com/PolinaPrem/chat_client.git
+    clone https://github.com/PolinaPrem/chat_client.git
     ```
 
 2. **Navigate to the project directory:**

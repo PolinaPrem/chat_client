@@ -37,7 +37,7 @@ This is a realtime chat application demonstrating communication using WebSockets
     ```
     
 
-7.  **Open your browser to `http://localhost:5173/` (or the port your frontend runs on).** You can open multiple browser tabs or windows to simulate multiple users.
+7.  **Open your browser to `http://localhost:5173/` .**
 
 ## Use Case
 

@@ -66,7 +66,7 @@ Mandatory Stack
 * React
 * Socket.IO Client
 
-## (Optional) Screenshots / GIFs
+##  Screenshots
 <img width="1196" alt="Screenshot 2025-06-03 at 15 13 52" src="https://github.com/user-attachments/assets/f5d916ae-f816-4203-bada-99cdcc7afc29" />
 
 

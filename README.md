@@ -6,7 +6,7 @@ This is a basic realtime chat application demonstrating communication using WebS
 ## Instructions to Run
 1.  **Copy this directory** to your local machine.
     ```bash
-    
+    https://github.com/PolinaPrem/chat_client.git
     ```
 
 2. **Navigate to the project directory:**
@@ -24,21 +24,20 @@ This is a basic realtime chat application demonstrating communication using WebS
     ```bash
     npm start
     ```
-    (or `node server.js` depending on your `package.json`)
 
 5.  **Open a new terminal and navigate to the frontend directory:**
     ```bash
-    cd frontend
+    cd frontend-vite
     npm install
     ```
 
 6.  **Run the frontend application:**
     ```bash
-    npm start
+    npm run dev
     ```
-    (or `yarn start` if you use Yarn)
+    
 
-7.  **Open your browser to `http://localhost:3000` (or the port your frontend runs on).** You can open multiple browser tabs or windows to simulate multiple users.
+7.  **Open your browser to `http://localhost:5173/` (or the port your frontend runs on).** You can open multiple browser tabs or windows to simulate multiple users.
 
 ## Use Case
 

@@ -22,7 +22,7 @@ This is a basic realtime chat application demonstrating communication using WebS
 
 4.  **Run the backend server:**
     ```bash
-    npm start
+    npm run dev
     ```
 
 5.  **Open a new terminal and navigate to the frontend directory:**
@@ -41,9 +41,18 @@ This is a basic realtime chat application demonstrating communication using WebS
 
 ## Use Case
 
-[ **YOUR CHOSEN USE CASE HERE** (e.g., Simple Chat Room, Realtime Collaboration Tool, Live Event Feed) ]
+- Chat Client: Fake incoming messages + reply field + mocked authentication
+
+
 
 ## Technologies Used
+Mandatory Stack
+- Frontend: React (with TypeScript ) + Vite
+- Backend: Node.js + Express
+- Real-time Communication: WebSocket
+
+
+
 
 **Backend:**
 
@@ -52,10 +61,10 @@ This is a basic realtime chat application demonstrating communication using WebS
 * Socket.IO
 
 **Frontend:**
-
+* Vite
 * React
 * Socket.IO Client
 
 ## (Optional) Screenshots / GIFs
 
-[ **SPACE FOR SCREENSHOTS OR GIFS OF YOUR APPLICATION** ]
+

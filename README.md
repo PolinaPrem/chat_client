@@ -5,7 +5,7 @@ This is a basic realtime chat application demonstrating communication using WebS
 
 ## Instructions to Run
 1.  **Copy this directory** to your local machine.
-```bash
+    ```bash
     
     ```
 

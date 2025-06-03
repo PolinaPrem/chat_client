@@ -1,7 +1,7 @@
 
 # Realtime Chat Application
 
-This is a basic realtime chat application demonstrating communication using WebSockets. Fake incoming messages + reply field
+This is a realtime chat application demonstrating communication using WebSockets. Fake incoming messages + reply field
 
 ## Instructions to Run
 1.  **Copy this directory** to your local machine.

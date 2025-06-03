@@ -11,6 +11,11 @@ export default function ChatPage() {
   const [socket, setSocket] = useState<Socket | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
+  // Reconnection state
+  const [reconnectAttempts, setReconnectAttempts] = useState(0);
+  const [isReconnecting, setIsReconnecting] = useState(false);
+  const [reconnectTimeout, setReconnectTimeout] = useState<number | null>(null);
+
   interface Message {
     id: string | number;
     text: string;
@@ -18,6 +23,14 @@ export default function ChatPage() {
     time: string;
     type?: "message" | "notification";
   }
+
+  const MAX_RECONNECT_ATTEMPTS = 5;
+  const BASE_DELAY = 1000; // 1 sec
+  const MAX_DELAY = 30000; // 30 sec
+
+  const calculateBackoffDelay = (attempt: number): number => {
+  return Math.min(BASE_DELAY * Math.pow(2, attempt), MAX_DELAY);
+};
 
   useEffect(() => {
     console.log("🔌 Connecting to server...");
@@ -28,6 +41,7 @@ export default function ChatPage() {
       console.log("Connected to the server!");
       setConnected(true);
 
+      //sets username, supposed to be visible for other users only
       const newusername = searchParams.get("username") || "";
       setUsername(newusername);
     });
@@ -98,6 +112,12 @@ export default function ChatPage() {
     }
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  };
+
   return (
     <div className="container">
       <div className="chatter-bar">
@@ -118,18 +138,20 @@ export default function ChatPage() {
               }
               key={index}
             >
-              {message.type === 'notification' ? (
-          <>
-            <p>{message.text}</p>
-            <small>{message.time}</small>
-          </>
-        ) : (
-          <>
-            <h5>{message.username !== username ? message.username : 'you'}</h5>
-            <p>{message.text}</p>
-            <small>{message.time}</small>
-          </>
-        )}
+              {message.type === "notification" ? (
+                <>
+                  <p>{message.text}</p>
+                  <small>{message.time}</small>
+                </>
+              ) : (
+                <>
+                  <h5>
+                    {message.username !== username ? message.username : "you"}
+                  </h5>
+                  <p>{message.text}</p>
+                  <small>{message.time}</small>
+                </>
+              )}
             </div>
           ))
         ) : (
@@ -142,6 +164,7 @@ export default function ChatPage() {
           placeholder="Type your message"
           value={messageVal}
           onChange={(e) => setMessageVal(e.target.value)}
+          onKeyUp={handleKeyPress}
         ></input>
         <button
           type="submit"

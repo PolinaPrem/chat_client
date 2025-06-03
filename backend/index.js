@@ -39,7 +39,6 @@ const randomMessages = [
   "How is everyone doing?",
   "Great weather today!",
   "Anyone up for a chat?",
-  "Just joined the conversation",
   "What's the topic today?",
   "Nice to meet you all",
   "Having a good day",
@@ -103,7 +102,7 @@ io.on("connection", (socket) => {
 });
 
 // Start random events every 5 seconds
-setInterval(generateRandomEvent, 5000);
+setInterval(generateRandomEvent, 4000);
 
 httpServer.listen(port, () => {
   console.log("🚀 Server running");

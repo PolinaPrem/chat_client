@@ -41,7 +41,7 @@ This is a realtime chat application demonstrating communication using WebSockets
 
 ## Use Case
 
-- Chat Client: Fake incoming messages + reply field + mocked authentication
+- Chat Client: Fake incoming messages + reply messages + mocked authentication
 
 
 

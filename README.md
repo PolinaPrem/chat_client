@@ -1,17 +1,17 @@
 
 # Realtime Chat Application
 
-This is a realtime chat application demonstrating communication using WebSockets. Fake incoming messages + reply field
+This is a realtime chat application demonstrating communication using WebSockets. Fake incoming messages + reply messages
 
 ## Instructions to Run
 1.  **Copy this directory** to your local machine.
     ```bash
-    clone https://github.com/PolinaPrem/chat_client.git
+    git clone https://github.com/PolinaPrem/chat_client.git
     ```
 
 2. **Navigate to the project directory:**
     ```bash
-    cd your-project-directory
+    cd chat_client
     ```
 
 3.  **Install backend dependencies:**
